@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Martins Bonders">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/inter.css">
+    <link rel="stylesheet" href="css/inter.css">
+    <link rel="stylesheet" href="css/devices.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="grid">
     <video autoplay muted loop id="myVideo">
-        <source src="img/MOSHED-2023-3-8-14-47-7 Kopie-50quality.webm" type="video/webm">
+        <source src="img/MOSHED-2023-3-8-14-47-7-Kopie-50quality.webm" type="video/webm">
     </video>
     <header class="grid-header">
         <nav class="header glass">
-            <h2 class="logo">Logo</h2>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <a href="#home"><img src="img/easternwaves.svg" alt="logo" width="80" height="80"></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" title="hamburger">
             <ul class="menu">
-              <li><a href="#dev">DEV</a></li>
-              <li><a href="#ui/ux">UI/UX</a></li>
-              <li><a href="#layout">LAYOUT</a></li>
-              <li><a href="#grafik">GRAFIK</a></li>
-              <li><a href="#ci/cd">CI/CD</a></li>
+                <li><a href="#dev">DEV</a></li>
+                <li><a href="#ui/ux">UI/UX</a></li>
+                <li><a href="#layout">LAYOUT</a></li>
+                <li><a href="#werbung">WERBUNG</a></li>
+                <li><a href="#grafik">GRAFIK</a></li>
             </ul>
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
           </nav>
     </header>
-    <!-- create main, 3 sections and 3 articles -->
     <main class="grid-main">
-        <!-- generate hero section-->
-        <section class="glass grid-main-hero">
+        <section id="home" class="glass grid-main-hero">
             <aside class="tech-slideshow">
                 <div class="mover-1"></div>
                 <div class="mover-2"></div>
             </aside>
             <article class="hero-text">
-                <h1>Martins Bonders</h1>
-                <h1>Designer & Developer</h1>
-                <h1>Telefon & E-Mail</h1>
+                <h1>Portfolio</h1>
+                <h2>Martins Bonders</h2>
+                <h2>Designer & Developer</h2>
             </article>
             <aside class="tech-slideshow">
                 <div class="mover-3"></div>
@@ -48,13 +48,21 @@
             <article class="glass">
                 <h2>Projekt 1</h2>
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1669545220173-849c2e2d7056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=250&q=60" alt="Pills">
-                    <img src="https://images.unsplash.com/photo-1669545220173-849c2e2d7056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=250&q=60" alt="Pills">
-                    <img src="https://images.unsplash.com/photo-1669545220173-849c2e2d7056?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=250&q=60" alt="Pills">
-                </figure>
+                    <img src="img/jellylade3.png" alt="alvarez mobile version" width="360" height="480">
                     <figcaption>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                     </figcaption>
+                    <div class="device device-surface-studio">
+                        <div class="device-frame">
+                            <embed src="https://wendigotech.github.io/Webseite/" alt="alvarez web version" width="800" height="500">
+                        </div>
+                        <div class="device-stripe"></div>
+                        <div class="device-header"></div>
+                        <div class="device-sensors"></div>
+                        <div class="device-btns"></div>
+                        <div class="device-power"></div>
+                      </div>
+                </figure>
             </article>
         </section>
         <section id="ui/ux" class="grid-main-ui">
@@ -84,7 +92,7 @@
                     </figcaption>
             </article>
         </section>
-        <section id="grafik" class="grid-main-grafik">
+        <section id="werbung" class="grid-main-grafik">
             <article class="glass">
                 <h2>Projekt 4</h2>
                 <figure>
@@ -99,7 +107,7 @@
                     </figcaption>
             </article>
         </section>
-        <section id="ci/cd" class="grid-main-ci">
+        <section id="grafik" class="grid-main-ci">
         <article class="glass">
             <h2>Projekt 5</h2>
             <figure>
@@ -115,7 +123,7 @@
     <footer class="glass">
         <nav>
         <ul>
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="#home"><img src="img/easternwaves.svg" alt="logo" width="50" height="50"></a></li>
             <li><a href="impressum.html">IMPRESSUM</a></li>
             <li><a href="datenschutz.html">DATENSCHUTZ</a></li>
         </ul>
