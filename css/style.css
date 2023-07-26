@@ -32,6 +32,10 @@ html{
   z-index: -1;
 }
 
+video {
+  object-fit: cover;
+}
+
 body{
   font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   color: #333;
@@ -303,14 +307,15 @@ figure img:hover{
   -ms-transform: scale(1.2)  rotate(5deg);
   -o-transform: scale(1.2) rotate(5deg);
   transform: scale(1.2) rotate(5deg);
-  filter: invert(1) sepia(1) saturate(1) hue-rotate(90deg);
+  filter: invert(1) sepia(1) saturate(1) hue-rotate(60deg);
+
 }
 
 figcaption p{
   color: #333;
   text-align: center;
-  padding: 2rem;
-  font-size: calc(1rem + 0.2vw);
+  padding: 1rem;
+  font-size: calc(1rem + 0.3vw);
 }
 
 .hero-text{
@@ -356,6 +361,12 @@ figcaption p{
 
 h2{
     font-size: calc(2rem + 1vw);
+    color: #333;
+    text-shadow: #000 0 0 1px;
+}
+
+h3{
+    font-size: calc(1rem + 1vw);
     color: #333;
     text-shadow: #000 0 0 1px;
 }
