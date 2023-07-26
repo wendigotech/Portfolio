@@ -3,7 +3,9 @@
   :root { font-family: 'Inter var', sans-serif; }
 }
 
-* {
+*,
+::before, 
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -199,31 +201,7 @@ section{
   padding: 1rem;
 }
 
-footer{
-  -moz-scroll-snap-align: start;
-  -moz-scroll-snap-stop: always;
-  scroll-snap-stop: always;
-  scroll-snap-align: start;
-  height: auto;
-  margin-top: 4rem;
-}
 
-footer li a{
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  display: block;
-  padding: 10px 10px;
-  text-decoration: none;
-  transition: 800ms;
-}
-
-footer li a:hover{
-  color: #f4f4f4;
-  background-color: #333;
-  border-radius: 16px;
-  transition: 800ms;
-}
 
 article{
   padding: 1rem;
@@ -411,10 +389,10 @@ a{
     "header header header"
     "main main main"
     "footer footer footer";
-  grid-template-columns: 10px, 1fr, 10px;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .grid-header {
@@ -530,14 +508,35 @@ aside {
 }
 
 
-
 /* Footer */
-
-footer {
+footer{
+  -moz-scroll-snap-align: start;
+  -moz-scroll-snap-stop: always;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  height: auto;
+  margin-top: 4rem;
   display: block;
   background: #333;
   color: #fff;
   text-align: center;
+}
+
+footer li a{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  padding: 10px 10px;
+  text-decoration: none;
+  transition: 800ms;
+}
+
+footer li a:hover{
+  color: #f4f4f4;
+  background-color: #333;
+  border-radius: 16px;
+  transition: 800ms;
 }
 
 footer nav {
