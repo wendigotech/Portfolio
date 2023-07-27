@@ -224,12 +224,6 @@ article img:hover{
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
   
-article h2{
-  color: #333;
-  font-size: calc(1.2rem + 1vw);
-  padding: 1rem;
-}
-  
 article p, a{
   color: #333;
 }
@@ -299,6 +293,8 @@ figure img{
 }
 
 figure img:hover{
+  position: relative;
+  z-index: 1;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.5);
   /* SCALE */
@@ -307,8 +303,7 @@ figure img:hover{
   -ms-transform: scale(1.2)  rotate(5deg);
   -o-transform: scale(1.2) rotate(5deg);
   transform: scale(1.2) rotate(5deg);
-  filter: invert(1) sepia(1) saturate(1) hue-rotate(60deg);
-
+  filter: invert(1) sepia(0) saturate(0) hue-rotate(60deg);
 }
 
 figcaption p{
@@ -316,6 +311,42 @@ figcaption p{
   text-align: center;
   padding: 1rem;
   font-size: calc(1rem + 0.3vw);
+}
+
+.image-container {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: .5s ease;
+  border-radius: 16px;
+  background-color: #333;
+  opacity: 0;
+  color: #f4f4f4;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.overlay:hover {
+  opacity: 0.8;
+  filter: invert(1) sepia(1) saturate(1) hue-rotate(60deg);
+}
+
+.text {
+  color: #f4f4f4;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .hero-text{
@@ -354,13 +385,13 @@ figcaption p{
 }
   
   h1{
-    font-size: calc(3rem + 1vw);
+    font-size: calc(2rem + 1vw);
     color: #000;
     text-shadow: #000 0 0 1px;
   }
 
 h2{
-    font-size: calc(2rem + 1vw);
+    font-size: calc(1.2rem + 1vw);
     color: #333;
     text-shadow: #000 0 0 1px;
 }
@@ -372,13 +403,12 @@ h3{
 }
 
 p{
-    font-size: 1rem;
+    font-size: 1rem + 0.8rem;
 }
 
 a{
     color: #fff;
 }
-
 
 /* Glassmorphism */
 
