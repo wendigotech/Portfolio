@@ -29,16 +29,16 @@
     </header>
     <main class="grid-main">
         <section id="home" class="glass grid-main-hero">
-            <aside class="tech-slideshow">
+            <aside class="tech-slideshow thumb test">
                 <div class="mover-1"></div>
                 <div class="mover-2"></div>
             </aside>
-            <article class="hero-text">
+            <div class="hero-text">
                 <h1>Portfolio</h1>
                 <h2>Martins Bonders</h2>
                 <h2>Designer & Developer</h2>
-            </article>
-            <aside class="tech-slideshow">
+            </div>
+            <aside class="tech-slideshow thumb">
                 <div class="mover-3"></div>
                 <div class="mover-4"></div>
             </aside>
@@ -50,8 +50,8 @@
                     <figcaption>
                         <h3>Ausbildungsprojekt - Webprojekt</h3>
                         <p>Gestaltung eines Webprojektes in Adobe XD und die Umsetzung mit HTML, CSS & JS.</p>
-                        <form action="https://wendigotech.github.io/Webseite/">
-                            <input type="submit" value="Link zur Webseite"/>
+                        <form action="https://wendigotech.github.io/Webseite/" target="_blank">
+                            <input type="submit" value="Link zur Webseite">
                         </form>
                     </figcaption>
                     <img src="img/alvarez-mobile.webp" alt="alvarez mobile version" width="560" height="480">
@@ -68,7 +68,8 @@
                 <figure>
                     <figcaption>
                         <h3>Screendesign</h3>
-                        <p>Adobe XD Challenge - Visuelle Gestaltung einer Mobilen App inklusive Logo.</p>
+                        <p>Adobe XD Challenge</p>
+                        <p>Visuelle Gestaltung einer Mobilen App inklusive Logo.</p>
                     </figcaption>
                     <img src="img/App-Icon-1.svg" alt="App icon" width="200" height="200">
                     <img src="img/ui-dark-mockup.webp" alt="mockup" width="400" height="300">
@@ -99,32 +100,37 @@
             </article>
         </section>
         <section id="werbung" class="glass">
+            <h2>Werbung</h2>
             <article>
-                <h2>Werbung</h2>
                 <figure>
                     <figcaption>
                         <h3>Ausbildungsprojekt - Veranstalltungsplakat</h3>
                         <p>Erstellt mit Adobe InDesign und Photoshop.</p>
                     </figcaption>
-                    <img src="img/capoeira-plakat-1.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
-                    <img src="img/capoeira-plakat-2.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
-                    <img src="img/capoeira-plakat-3.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
+                        <img src="img/capoeira-plakat-1.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
+                        <img src="img/capoeira-plakat-2.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
+                        <img src="img/capoeira-plakat-3.webp" alt="Plakat-Capoeira-Ibeca" width="300" height="500">
                 </figure>
             </article>
         </section>
         <section id="grafik" class="glass">
-        <article>
             <h2>Grafik</h2>
-            <figure>
-                <figcaption>
-                    <h3>Schulprojekt - Infografik: Wölfe in Deutschland</h3>
-                    <p>Erstellt mit Adobe Illustrator & Photoshop.</p>
-                </figcaption>
-                <img src="img/Infografik-Wolf-Web.webp" alt="Infografik: Wölfe in Deutschland" width="700" height="500">
-            </figure>
-        </article>
+            <article>
+                <figure>
+                    <figcaption>
+                        <h3>Schulprojekt - Infografik: Wölfe in Deutschland</h3>
+                        <p>Erstellt mit Adobe Illustrator & Photoshop.</p>
+                    </figcaption>
+                    <img src="img/Infografik-Wolf-Web.webp" alt="Infografik: Wölfe in Deutschland" width="700" height="500">
+                </figure>
+            </article>
         </section>    
     </main>
+    <script>
+        // Add passive event listeners to improve scrolling performance
+        document.addEventListener('touchstart', function() {}, { passive: true });
+        document.addEventListener('wheel', function() {}, { passive: true });
+    </script>
     <footer class="glass grid-footer">
         <nav>
             <ul>
