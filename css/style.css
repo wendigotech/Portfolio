@@ -500,7 +500,7 @@ aside {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    transform: translate3d(12px, -90%, 3rem) rotate(0deg);
+    transform: translate3d(12px, -50%, 3rem) rotate(0deg);
 }
 }
 
@@ -678,6 +678,8 @@ embed {
   border-radius: 3px 3px 0 0;
   width: 55vw;
   height: 40vh;
+  resize: both;
+  overflow: hidden;
 }
 
 .browser-mockup:before {
