@@ -338,42 +338,6 @@ figcaption p{
   font-size: calc(1rem + 0.3vw);
 }
 
-.image-container {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: auto;
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: .5s ease;
-  border-radius: 16px;
-  background-color: #333;
-  opacity: 0;
-  color: #f4f4f4;
-  font-size: 1rem;
-  padding: 1rem;
-  text-align: center;
-}
-
-.overlay:hover {
-  opacity: 0.8;
-  filter: invert(1) sepia(1) saturate(1) hue-rotate(60deg);
-}
-
-.text {
-  color: #f4f4f4;
-  font-size: 1rem;
-  padding: 1rem;
-  text-align: center;
-}
-
 .hero-text{
   flex-basis: 100%;
 }
@@ -514,7 +478,6 @@ aside.test {
     display: none;
   }
 }
-
 
 .tech-slideshow > div {
   width: 150rem;
