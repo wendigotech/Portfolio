@@ -54,56 +54,6 @@ html{
   }
 }
 
-  .grid-main-hero {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: baseline;
-    justify-content: center;
-    height: 50dvh;
-  }
-
-  .grid-main-hero h1 {
-    font-size: calc(1.2rem + 1vw);
-  }
-
-  .grid-main-hero h2 {
-    font-size: calc(1.1rem + 1vw);
-  }
-
-  .grid-main-hero h3 {
-    font-size: calc(1rem + 1vw);
-  }
-
-  .grid-main-hero p {
-    font-size: calc(0.9rem + 1vw);
-  }
-
-  .grid-main-hero a {
-    font-size: calc(0.9rem + 1vw);
-  }
-
-  .grid-main-hero input {
-    font-size: calc(0.9rem + 1vw);
-  }
-
-  .grid-main-hero img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3); */
-    /* SCALE */
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
-    /* VERZÖGERUNG */
-    -webkit-transition
-
-}
-
 #myVideo {
   position: fixed;
   left: 0;
@@ -537,7 +487,7 @@ aside {
 }
 
 aside.test {
-  transform: translate3d(12px, 90%, 3rem) rotate(270deg);
+  transform: translate3d(0, 90%, 3rem) rotate(270deg);
 }
 
 .tech-slideshow {
@@ -546,8 +496,7 @@ aside.test {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  transform: translate3d(12px, 90%, 3rem) rotate(90deg);
-
+  transform: translate3d(0, 90%, 3rem) rotate(90deg);
 }
 
 @media screen and (max-width: 48rem) {
@@ -558,11 +507,8 @@ aside.test {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    transform: translate3d(12px, -50%, 3rem) rotate(0deg);
-}
-}
-
-@media screen and (max-width: 48rem) {
+    transform: translate3d(0, -50%, 3rem) rotate(0deg);
+  }
 
   aside.test{
     display: none;
@@ -571,15 +517,13 @@ aside.test {
 
 
 .tech-slideshow > div {
-  height: 15rem;
   width: 150rem;
-
+  height: 100%;
   background-size: contain;
   background-attachment: fixed;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   transform: translate3d(0, 0, 0);
 }
 
@@ -636,7 +580,7 @@ aside.test {
   }
 
   70% {
-    background-image: url(../img/alvarez-mobile.webp) rotate(90deg);
+    background-image: url(../img/alvarez-mobile.webp);
     transform: translateX(-66.6666%);
   }
   100% { 
@@ -725,7 +669,6 @@ embed {
   width: 100%;
   height: -webkit-fill-available;
   height: -moz-available;
-  height: fill-available;
   height: inherit;
 }
 
