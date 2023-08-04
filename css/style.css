@@ -381,7 +381,7 @@ figcaption p{
 .hero-text h1, .hero-text h2{
   color: #f4f4f4;
   background: #000;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem;
   width: -moz-fit-content;
   width: fit-content;
