@@ -536,11 +536,9 @@ aside.test {
 
   70% {
     background-image: url(../img/alvarez-mockup-400w.webp);
-    transform: translateX(-66.6666%);
   }
   100% { 
     background-image: url(../img/capoeira-plakat-3-300w.webp);
-    transform: translateX(-66.6666%);
   }
 }
 
