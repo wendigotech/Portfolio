@@ -486,27 +486,27 @@ aside.test {
 }
 
 .tech-slideshow .mover-1 {
-  animation: moveSlideshow 20s linear infinite reverse;
+  animation: moveSlideshow 30s linear infinite reverse;
   mix-blend-mode: luminosity;
 }
 .tech-slideshow .mover-2 {
   opacity: 0;
   transition: opacity 0.5s ease-out;
   background-position: 0 -2rem;
-  animation: moveSlideshow 25s linear infinite;
+  animation: moveSlideshow 35s linear infinite;
 }
 
 .tech-slideshow:hover .mover-2 {
   opacity: 1;
 }
 .tech-slideshow .mover-3 {
-  animation: moveSlideshow 20s linear infinite reverse;
+  animation: moveSlideshow 30s linear infinite reverse;
   mix-blend-mode: luminosity;
 }
 .tech-slideshow .mover-4 {
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  animation: moveSlideshow 25s linear infinite;
+  animation: moveSlideshow 35s linear infinite;
 }
 
 .tech-slideshow:hover .mover-4 {
@@ -516,30 +516,57 @@ aside.test {
 @keyframes moveSlideshow {
   0% {
     background-image: url(../img/capoeira-plakat-1-300w.webp);
+    transform: translateX(-66.6666%);
   }
 
-  15% {
-    background-image: url(../img/Infografik-Wolf-Web-400w.webp);
+  10% {
+    background-image: url(../img/ui-mockup-400w.webp);
+    transform: translateX(-66.6666%);
   }
 
-  25% {
-    background-image: url(../img/layout-seiten-16-17-400w.webp);
+  20% {
+    background-image: url(../img/layout-seite-1-400w.webp);
+    transform: translateX(-66.6666%);
   }
 
-  40% {
+  30% {
     background-image: url(../img/capoeira-plakat-2-300w.webp);
+    transform: translateX(-66.6666%);
   }
-  55% {
-    background-image: url(../img/ui-dark-mockup-400w.webp);
-    /* transform: translateX(-66.6666%); */
+  40% {
+    background-image: url(../img/App-Icon-1.svg);
+    transform: translateX(-66.6666%);
+  }
+
+  50% {
+    background-image: url(../img/alvarez-mockup-400w.webp);
+    transform: translateX(-66.6666%);
+  }
+  60% { 
+    background-image: url(../img/capoeira-plakat-3-300w.webp);
+    transform: translateX(-66.6666%);
   }
 
   70% {
-    background-image: url(../img/alvarez-mockup-400w.webp);
+    background-image: url(../img/layout-seiten-4-5-400w.webp);
+    transform: translateX(-66.6666%);
   }
-  100% { 
-    background-image: url(../img/capoeira-plakat-3-300w.webp);
+
+  80% {
+    background-image: url(../img/Infografik-Wolf-Web-400w.webp);
+    transform: translateX(-66.6666%);
   }
+
+  90% {
+    background-image: url(../img/ui-dark-mockup-400w.webp);
+    transform: translateX(-66.6666%);
+  }
+
+  100% {
+    background-image: url(../img/layout-seiten-16-17-400w.webp);
+    transform: translateX(-66.6666%);
+  }
+
 }
 
 .mask {
@@ -607,7 +634,7 @@ embed {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 0.5rem;
-  width: 85vw;
+  width: 80vw;
   height: 45vh;
 }
 
