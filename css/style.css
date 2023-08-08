@@ -468,7 +468,7 @@ aside.test {
 
 }
 
-@media screen and (min-width: 48rem){
+@media screen and (min-width: 769px){
   #dev img{
     display: none;
   }
