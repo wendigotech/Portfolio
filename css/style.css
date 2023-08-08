@@ -515,7 +515,7 @@ aside.test {
 
 @keyframes moveSlideshow {
   0% {
-    background-image: url(../img/capoeira-plakat-1.webp);
+    background-image: url(../img/capoeira-plakat-1-300w.webp);
   }
 
   15% {
@@ -527,7 +527,7 @@ aside.test {
   }
 
   40% {
-    background-image: url(../img/capoeira-plakat-2.webp);
+    background-image: url(../img/capoeira-plakat-2-300w.webp);
   }
   55% {
     background-image: url(../img/ui-dark-mockup.webp);
@@ -539,7 +539,7 @@ aside.test {
     transform: translateX(-66.6666%);
   }
   100% { 
-    background-image: url(../img/capoeira-plakat-2.webp);
+    background-image: url(../img/capoeira-plakat-3-300w.webp);
     transform: translateX(-66.6666%);
   }
 }
