@@ -399,7 +399,7 @@ figcaption p{
 .grid-main-hero {
   display: flex;
   gap: 1rem;
-  align-items: baseline;
+  align-items: center;
   height: 70dvh;
 
 }
@@ -433,7 +433,7 @@ aside {
 }
 
 aside.test {
-  transform: translate3d(0, 90%, 3rem) rotate(270deg);
+  transform: translate3d(0, 0, 3rem) rotate(270deg);
 }
 
 .tech-slideshow {
@@ -442,7 +442,7 @@ aside.test {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  transform: translate3d(0, 90%, 3rem) rotate(90deg);
+  transform: translate3d(0, 0, 3rem) rotate(90deg);
   border-radius: 0.5rem;
 }
 
@@ -454,7 +454,7 @@ aside.test {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    transform: translate3d(0, -50%, 3rem) rotate(0deg);
+    transform: translate3d(0, -10dvh, 3rem) rotate(0deg);
     border-radius: 0.5rem;
   }
 
@@ -521,12 +521,12 @@ aside.test {
 
   10% {
     background-image: url(../img/ui-mockup-400w.webp);
-    transform: translateX(-36.6666%);
+    transform: translateX(-46.6666%);
   }
 
   20% {
     background-image: url(../img/layout-seite-1-400w.webp);
-    transform: translateX(-6.6666%);
+    transform: translateX(-26.6666%);
   }
 
   30% {
@@ -535,12 +535,12 @@ aside.test {
   }
   40% {
     background-image: url(../img/App-Icon-1.svg);
-    transform: translateX(-36.6666%);
+    transform: translateX(-46.6666%);
   }
 
   50% {
     background-image: url(../img/alvarez-mockup-400w.webp);
-    transform: translateX(-6.6666%);
+    transform: translateX(-26.6666%);
   }
   60% { 
     background-image: url(../img/capoeira-plakat-3-300w.webp);
@@ -549,12 +549,12 @@ aside.test {
 
   70% {
     background-image: url(../img/layout-seiten-4-5-400w.webp);
-    transform: translateX(-36.6666%);
+    transform: translateX(-46.6666%);
   }
 
   80% {
     background-image: url(../img/Infografik-Wolf-Web-400w.webp);
-    transform: translateX(-6.6666%);
+    transform: translateX(-26.6666%);
   }
 
   90% {
@@ -564,7 +564,7 @@ aside.test {
 
   100% {
     background-image: url(../img/layout-seiten-16-17-400w.webp);
-    transform: translateX(-36.6666%);
+    transform: translateX(-46.6666%);
   }
 }
 
