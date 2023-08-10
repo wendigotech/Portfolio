@@ -21,7 +21,7 @@
                 <li><a href="#dev">DEV</a></li>
                 <li><a href="#ui/ux">UI/UX</a></li>
                 <li><a href="#layout">LAYOUT</a></li>
-                <li><a href="#werbung">WERBUNG</a></li>
+                <li><a href="#werb">WERBUNG</a></li>
                 <li><a href="#grafik">GRAFIK</a></li>
             </ul>
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -61,7 +61,7 @@
                         sizes="50vw" 
                         alt="alvarez mobile mockup">
                     <div class="browser-mockup resizable">
-                    <embed src="https://wendigotech.github.io/Webseite/" alt="alvarez web version">
+                        <embed src="https://wendigotech.github.io/Webseite/" alt="alvarez web version">
                     </div>
                 </figure>
                 <br>
@@ -103,7 +103,7 @@
                 </figure>
             </article>
         </section>
-        <section id="werbung" class="glass magic-hover magic-hover__square">
+        <section id="werb" class="glass magic-hover magic-hover__square">
             <h2>Werbung</h2>
             <article>
                 <figure>
@@ -157,6 +157,11 @@
         "outerHeight": 30,
         }
         magicMouse(options);
+        // add smooth scroll
+        var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 1000,
+        speedAsDuration: true
+        });
     </script>
 </body>
 </html>
