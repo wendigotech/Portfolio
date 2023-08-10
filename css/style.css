@@ -620,12 +620,6 @@ footer nav ul li a:hover {
   transition: 800ms;
 }
 
-embed {
-  width: 100%;
-  height: -webkit-fill-available;
-  height: -moz-available;
-  height: inherit;
-}
 
 .browser-mockup {
   margin-top: 2rem;
@@ -633,8 +627,8 @@ embed {
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 0.5rem;
-  width: 80vw;
-  height: 45vh;
+  width: 70dvw;
+  height: 60dvh;
 }
 
 .browser-mockup:before {
@@ -650,4 +644,10 @@ embed {
   box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
 }
 
+embed {
+  width: 100%;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: inherit;
+}
 
