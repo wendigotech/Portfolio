@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-html{
+html, body{
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-padding: 7rem;
@@ -245,7 +245,7 @@ section{
   scroll-snap-align: start;
   height: auto;
   margin-top: 4rem;
-  padding: 1rem;
+  padding: 10dvh 0 10dvh 0;; 
 }
 
 article{
