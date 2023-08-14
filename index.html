@@ -48,7 +48,7 @@
         <section id="dev" class="glass magic-hover magic-hover__square">
             <h2>DEV</h2>
             <article>
-                <figure id="images">
+                <figure class="images">
                     <figcaption>
                         <h3>Ausbildungsprojekt - Webprojekt</h3>
                         <p>Gestaltung eines Webprojektes in Adobe XD und die Umsetzung mit HTML, CSS & JS.</p>
@@ -80,7 +80,7 @@
         <section id="ui/ux" class="glass magic-hover magic-hover__square">
             <h2>UI/UX</h2>
             <article>
-                <figure id="images">
+                <figure class="images">
                     <figcaption>
                         <h3>Screendesign - Adobe XD Challenge</h3>
                         <p>Visuelle Gestaltung einer Mobilen App inklusive Logo.</p>
@@ -94,7 +94,7 @@
                         data-width="500">
                         <img src="img/App-Icon-1.svg" alt="App icon" width="200" height="200">
                     </a>
-                    <div id="images">
+                    <div class="images">
                         <a  
                         href="img/ui-mockup-1920w.webp"
                         data-img="img/ui-mockup-1920w.webp"
@@ -122,7 +122,7 @@
         <section id="layout" class="glass magic-hover magic-hover__square">
             <h2>Layout</h2>
             <article>
-                <figure id="images">
+                <figure class="images">
                     <figcaption>
                         <h3>Schulprojekt - Layoutdesign</h3>
                         <p>Sonderausgabe für das Magazin <cite>„Hohe Luft“</cite>.</p>
@@ -169,7 +169,7 @@
                         <h3>Ausbildungsprojekt - Veranstalltungsplakat</h3>
                         <p>Erstellt mit Adobe InDesign und Photoshop.</p>
                     </figcaption>
-                    <div id="images">
+                    <div class="images">
                         <a  
                         href="img/capoeira-plakat-1-600w.webp"
                         data-img="img/capoeira-plakat-1-600w.webp"
@@ -204,7 +204,7 @@
         <section id="grafik" class="glass magic-hover magic-hover__square">
             <h2>Grafik</h2>
             <article>
-                <figure id="images">
+                <figure class="images">
                     <figcaption>
                         <h3>Schulprojekt - Infografik: Wölfe in Deutschland</h3>
                         <p>Erstellt mit Adobe Illustrator & Photoshop.</p>
@@ -254,7 +254,7 @@
             target: document.body,
         })
         // grab image links
-        let imageLinks = document.querySelectorAll('#images > a')
+        let imageLinks = document.querySelectorAll('.images > a')
         // add click listener to open BiggerPicture
         for (let link of imageLinks) {
         link.addEventListener("click", openGallery);
