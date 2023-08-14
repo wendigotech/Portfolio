@@ -220,6 +220,7 @@ h3{
   /* 48em = 768px */
 
 @media (min-width: 48rem) {
+
   .header li {
     float: left;
   }
@@ -445,6 +446,11 @@ aside.test {
 }
 
 @media screen and (max-width: 48rem) {
+  html, body{
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding: 7rem;
+  }
 
   .tech-slideshow {
     height: 15rem;
