@@ -307,6 +307,12 @@ figure{
   gap: 2rem;
 }
 
+figure.dev{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 figure img{
   max-width: 100%;
   height: auto;
