@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio von Martins Bonders">
     <title>Portfolio</title>
+    <link rel="icon" href="img/easternwaves.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.11/dist/bigger-picture.min.css">
     <link rel="stylesheet" href="css/inter.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -46,7 +48,7 @@
         <section id="dev" class="glass magic-hover magic-hover__square">
             <h2>DEV</h2>
             <article>
-                <figure>
+                <figure id="images">
                     <figcaption>
                         <h3>Ausbildungsprojekt - Webprojekt</h3>
                         <p>Gestaltung eines Webprojektes in Adobe XD und die Umsetzung mit HTML, CSS & JS.</p>
@@ -54,12 +56,20 @@
                             <input type="submit" value="Link zur Webseite">
                         </form>
                     </figcaption>
-                    <img
-                        src="img/alvarez-mockup-800w.webp" 
-                        width="800" height="465" 
-                        srcset="img/alvarez-mockup-800w.webp 800w, img/alvarez-mockup-400w.webp 400w" 
-                        sizes="50vw" 
-                        alt="alvarez mobile mockup">
+                    <a  
+                        href="img/alvarez-mockup-800w.webp"
+                        data-img="img/alvarez-mockup-800w.webp"
+                        data-thumb="img/alvarez-mockup-400w.webp"
+                        data-alt="alvarez mobile mockup"
+                        data-height="465"
+                        data-width="800">
+                        <img
+                            src="img/alvarez-mockup-800w.webp" 
+                            width="800" height="465" 
+                            srcset="img/alvarez-mockup-800w.webp 800w, img/alvarez-mockup-400w.webp 400w" 
+                            sizes="50vw" 
+                            alt="alvarez mobile mockup">
+                    </a>
                     <div class="browser-mockup resizable">
                         <embed src="https://wendigotech.github.io/Webseite/" alt="alvarez web version">
                     </div>
@@ -70,17 +80,41 @@
         <section id="ui/ux" class="glass magic-hover magic-hover__square">
             <h2>UI/UX</h2>
             <article>
-                <figure>
+                <figure id="images">
                     <figcaption>
                         <h3>Screendesign - Adobe XD Challenge</h3>
                         <p>Visuelle Gestaltung einer Mobilen App inklusive Logo.</p>
                     </figcaption>
-                    <img src="img/App-Icon-1.svg" alt="App icon" width="200" height="200">
-                    <div>
-                        <img width="600" height="450" src="img/ui-mockup-800w.webp" 
+                    <a  
+                        href="img/App-Icon-1.svg"
+                        data-img="img/App-Icon-1.svg"
+                        data-thumb="img/App-Icon-1.svg"
+                        data-alt="App icon"
+                        data-height="500"
+                        data-width="500">
+                        <img src="img/App-Icon-1.svg" alt="App icon" width="200" height="200">
+                    </a>
+                    <div id="images">
+                        <a  
+                        href="img/ui-mockup-1920w.webp"
+                        data-img="img/ui-mockup-1920w.webp"
+                        data-thumb="img/ui-mockup-400w.webp"
+                        data-alt="mockup"
+                        data-height="1080"
+                        data-width="1920">
+                            <img width="600" height="450" src="img/ui-mockup-800w.webp" 
                         srcset="img/ui-mockup-1920w.webp 1920w, img/ui-mockup-800w.webp 800w, img/ui-mockup-400w.webp 400w" sizes="50vw" alt="mockup">
-                        <img width="600" height="450" src="img/ui-dark-mockup-800w.webp" 
+                        </a>
+                        <a  
+                        href="img/ui-dark-mockup-1280w.webp"
+                        data-img="img/ui-dark-mockup-1280w.webp"
+                        data-thumb="img/ui-dark-mockup-400w.webp"
+                        data-alt="dark mockup"
+                        data-height="600"
+                        data-width="1080">
+                            <img width="600" height="450" src="img/ui-dark-mockup-800w.webp" 
                         srcset="img/ui-dark-mockup-1280w.webp 1280w, img/ui-dark-mockup-800w.webp 800w, img/ui-dark-mockup-400w.webp 400w" sizes="50vw" alt="dark mockup">
+                        </a>
                     </div>
                 </figure>
             </article>
@@ -88,7 +122,7 @@
         <section id="layout" class="glass magic-hover magic-hover__square">
             <h2>Layout</h2>
             <article>
-                <figure>
+                <figure id="images">
                     <figcaption>
                         <h3>Schulprojekt - Layoutdesign</h3>
                         <p>Sonderausgabe für das Magazin <cite>„Hohe Luft“</cite>.</p>
@@ -97,9 +131,33 @@
                             <input type="submit" value="Link zum PDF">
                         </form>
                     </figcaption>
-                    <img width="400" height="320" src="img/layout-seite-1-400w.webp" srcset="img/layout-seite-1-400w.webp 400w, img/layout-seite-1-580w.webp 580w" sizes="50vw" alt="layout seite 1">
-                    <img width="800" height="320" src="img/layout-seiten-4-5-800w.webp" srcset="img/layout-seiten-4-5-1150w.webp 1150w, img/layout-seiten-4-5-800w.webp 800w, img/layout-seiten-4-5-400w.webp 400w" sizes="50vw" alt="layout seiten 4-5">
-                    <img width="800" height="320" src="img/layout-seiten-16-17-800w.webp" srcset="img/layout-seiten-16-17-1150w.webp 1150w, img/layout-seiten-16-17-800w.webp 800w, img/layout-seiten-16-17-400w.webp 400w" sizes="50vw" alt="layout seiten 16-17">
+                    <a  
+                        href="img/layout-seite-1-580w.webp"
+                        data-img="img/layout-seite-1-580w.webp"
+                        data-thumb="img/layout-seite-1-400w.webp"
+                        data-alt="layout seite 1"
+                        data-height="500"
+                        data-width="580">
+                        <img width="580" height="320" src="img/layout-seite-1-580w.webp" srcset="img/layout-seite-1-580w.webp 580w, img/layout-seite-1-400w.webp 400w" sizes="50vw" alt="layout seite 1">
+                    </a>
+                    <a  
+                        href="img/layout-seiten-4-5-1150w.webp"
+                        data-img="img/layout-seiten-4-5-1150w.webp"
+                        data-thumb="img/layout-seiten-4-5-400w.webp"
+                        data-alt="layout seiten 4-5"
+                        data-height="700"
+                        data-width="1150">
+                        <img width="800" height="320" src="img/layout-seiten-4-5-800w.webp" srcset="img/layout-seiten-4-5-1150w.webp 1150w, img/layout-seiten-4-5-800w.webp 800w, img/layout-seiten-4-5-400w.webp 400w" sizes="50vw" alt="layout seiten 4-5">
+                    </a>
+                    <a  
+                        href="img/layout-seiten-16-17-1150w.webp"
+                        data-img="img/layout-seiten-16-17-1150w.webp"
+                        data-thumb="img/layout-seiten-16-17-400w.webp"
+                        data-alt="layout seiten 16-17"
+                        data-height="700"
+                        data-width="1150">
+                        <img width="800" height="320" src="img/layout-seiten-16-17-800w.webp" srcset="img/layout-seiten-16-17-1150w.webp 1150w, img/layout-seiten-16-17-800w.webp 800w, img/layout-seiten-16-17-400w.webp 400w" sizes="50vw" alt="layout seiten 16-17">
+                    </a>
                 </figure>
             </article>
         </section>
@@ -111,10 +169,34 @@
                         <h3>Ausbildungsprojekt - Veranstalltungsplakat</h3>
                         <p>Erstellt mit Adobe InDesign und Photoshop.</p>
                     </figcaption>
-                    <div>
-                        <img width="300" height="500" src="img/capoeira-plakat-1-300w.webp" srcset="img/capoeira-plakat-1-600w.webp 600w, img/capoeira-plakat-1-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
-                        <img width="300" height="500" src="img/capoeira-plakat-2-300w.webp" srcset="img/capoeira-plakat-2-600w.webp 600w, img/capoeira-plakat-2-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
-                        <img width="300" height="500" src="img/capoeira-plakat-3-300w.webp" srcset="img/capoeira-plakat-3-600w.webp 600w, img/capoeira-plakat-3-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
+                    <div id="images">
+                        <a  
+                        href="img/capoeira-plakat-1-600w.webp"
+                        data-img="img/capoeira-plakat-1-600w.webp"
+                        data-thumb="img/capoeira-plakat-1-300w.webp"
+                        data-alt="Plakat Capoeira Ibeca"
+                        data-height="800"
+                        data-width="600">
+                            <img width="300" height="500" src="img/capoeira-plakat-1-300w.webp" srcset="img/capoeira-plakat-1-600w.webp 600w, img/capoeira-plakat-1-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
+                        </a>
+                        <a  
+                        href="img/capoeira-plakat-2-600w.webp"
+                        data-img="img/capoeira-plakat-2-600w.webp"
+                        data-thumb="img/capoeira-plakat-2-300w.webp"
+                        data-alt="Plakat Capoeira Ibeca"
+                        data-height="800"
+                        data-width="600">
+                            <img width="300" height="500" src="img/capoeira-plakat-2-300w.webp" srcset="img/capoeira-plakat-2-600w.webp 600w, img/capoeira-plakat-2-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
+                        </a>
+                        <a  
+                        href="img/capoeira-plakat-3-600w.webp"
+                        data-img="img/capoeira-plakat-3-600w.webp"
+                        data-thumb="img/capoeira-plakat-3-300w.webp"
+                        data-alt="Plakat Capoeira Ibeca"
+                        data-height="800"
+                        data-width="600">
+                            <img width="300" height="500" src="img/capoeira-plakat-3-300w.webp" srcset="img/capoeira-plakat-3-600w.webp 600w, img/capoeira-plakat-3-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca">
+                        </a>
                     </div>   
                 </figure>
             </article>
@@ -122,12 +204,21 @@
         <section id="grafik" class="glass magic-hover magic-hover__square">
             <h2>Grafik</h2>
             <article>
-                <figure>
+                <figure id="images">
                     <figcaption>
                         <h3>Schulprojekt - Infografik: Wölfe in Deutschland</h3>
                         <p>Erstellt mit Adobe Illustrator & Photoshop.</p>
                     </figcaption>
-                    <img width="800" height="580" src="img/Infografik-Wolf-Web-800w.webp" srcset="img/Infografik-Wolf-Web-1000w.webp 1000w, img/Infografik-Wolf-Web-800w.webp 800w, img/Infografik-Wolf-Web-400w.webp 400w" sizes="50vw" alt="Infografik: Wölfe in Deutschland">
+                    <a 
+                    href="img/Infografik-Wolf-Web-1000w.webp"
+                    data-img="img/Infografik-Wolf-Web-1000w.webp"
+                    data-thumb="img/Infografik-Wolf-Web-400w.webp"
+                    data-alt="Infografik: Wölfe in Deutschland"
+                    data-height="700"
+                    data-width="1000"
+                    >
+                        <img width="800" height="580" src="img/Infografik-Wolf-Web-800w.webp" srcset="img/Infografik-Wolf-Web-1000w.webp 1000w, img/Infografik-Wolf-Web-800w.webp 800w, img/Infografik-Wolf-Web-400w.webp 400w" sizes="50vw" alt="Infografik: Wölfe in Deutschland">
+                    </a>
                 </figure>
             </article>
         </section>    
@@ -141,22 +232,41 @@
             </ul>
         </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.11/dist/bigger-picture.min.js"></script>
     <script src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js">
     </script>
     <script>
-        // Add passive event listeners to improve scrolling performance
-        document.addEventListener('touchstart', function() {}, { passive: true });
-        document.addEventListener('wheel', function() {}, { passive: true });
         // add magic mouse
         options = {
-        "outerStyle": "disable",
+        "outerStyle": "border: 2px solid red;",
         "hoverEffect": "pointer-overlay",
         "hoverItemMove": false,
         "defaultCursor": false,
-        "outerWidth": 30,
-        "outerHeight": 30,
+        "outerWidth": 50,
+        "outerHeight": 50,
         }
         magicMouse(options);
+        // Add passive event listeners to improve scrolling performance
+        document.addEventListener('touchstart', function() {}, { passive: true });
+        document.addEventListener('wheel', function() {}, { passive: true });
+        // initialize
+        let bp = BiggerPicture({
+            target: document.body,
+        })
+        // grab image links
+        let imageLinks = document.querySelectorAll('#images > a')
+        // add click listener to open BiggerPicture
+        for (let link of imageLinks) {
+        link.addEventListener("click", openGallery);
+        }
+        // function to open BiggerPicture
+        function openGallery(e) {
+            e.preventDefault()
+            bp.open({
+                items: imageLinks,
+                el: e.currentTarget,
+            })
+        }
     </script>
 </body>
 </html>
