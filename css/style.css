@@ -13,7 +13,7 @@
 
 html, body{
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-padding: 7rem;
 }
 
@@ -28,7 +28,7 @@ html, body{
 
   html {
     scroll-behavior: auto;
-    scroll-snap-type: none;
+    /* scroll-snap-type: none; */
   }
 
   body {
@@ -243,11 +243,11 @@ main{
 }
 
 section{
-  -moz-scroll-snap-align: start;
+  /* -moz-scroll-snap-align: start;
   -moz-scroll-snap-stop: always;
   -webkit-scroll-snap-stop: always;
   scroll-snap-stop: always;
-  scroll-snap-align: start;
+  scroll-snap-align: start; */
   height: auto;
   margin-top: 4rem;
   padding: 10dvh 0 10dvh 0;; 
@@ -449,7 +449,7 @@ aside.test {
 @media screen and (max-width: 48rem) {
   html, body{
     scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     scroll-padding: 7rem;
   }
 
@@ -580,10 +580,10 @@ aside.test {
 
 /* Footer */
 footer{
-  -moz-scroll-snap-align: start;
+  /* -moz-scroll-snap-align: start;
   -moz-scroll-snap-stop: always;
   scroll-snap-stop: always;
-  scroll-snap-align: start;
+  scroll-snap-align: start; */
   height: auto;
   margin-top: 4rem;
   display: block;
