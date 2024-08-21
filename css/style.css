@@ -108,7 +108,7 @@ h3{
   align-items: center;
   position: fixed;
   width: 98%;
-  z-index: 3;
+  z-index: 10000;
   top: 0.6rem;
   padding: 5px;
   right: 0;
