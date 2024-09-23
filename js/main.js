@@ -34,3 +34,21 @@ vfx.add(el5, { shader: "sinewave", overflow: 0 });
 // | "warpTransition"
 // | "pixelateTransition"
 // | "focusTransition";
+
+
+
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    });
+});
+
+// Observe each section
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
