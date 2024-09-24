@@ -77,7 +77,19 @@ body{
 }
 
 #magicPointer {
+  z-index: 10002;
+}
+
+.bp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
   z-index: 10000;
+  contain: strict;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, h3{
