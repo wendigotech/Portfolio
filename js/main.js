@@ -9,7 +9,7 @@ const el5 = document.querySelector('.vfx6')
 // const video = document.querySelector('#myVideo')
 
 const vfx = new VFX();
-vfx.add(div, { shader: "warpTransition", overflow: 20 });
+vfx.add(div, { shader: "warpTransition", overflow: 0 });
 vfx.add(el, { shader: "slitScanTransition", overflow: 0 });
 vfx.add(el2, { shader: "pixelateTransition", overflow: 0 });
 vfx.add(el3, { shader: "rgbShift", overflow: 0 });
