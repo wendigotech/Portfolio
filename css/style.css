@@ -12,6 +12,8 @@
 }
 
 html, body{
+  max-width: 90dvw;
+  margin: 0 auto;
   scroll-behavior: smooth;
   /* scroll-snap-type: y mandatory; */
   scroll-padding: 7rem;
