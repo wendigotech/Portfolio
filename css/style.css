@@ -19,6 +19,69 @@ html, body{
   scroll-padding: 7rem;
 }
 
+
+mark {
+  animation: highlight linear forwards;
+	animation-timeline: view(60% 20%);
+	background: linear-gradient(
+    to right,
+		oklch(0.86 0.19 84.89 / 1) 50%,
+		oklch(0.86 0.19 84.89 / 0) 50%
+    );
+    background-position: 100%;
+    background-size: 200% 100%;
+    border-radius: 0.125rem;
+    padding-inline: 0.125rem;
+    padding-block: 0.1rem 0.5svh
+  }
+  
+  @keyframes highlight {
+    to {
+      background-position: 0;
+    }
+  }
+  
+/* figure {
+  overflow: hidden;
+}
+
+figure img {
+  display: inline-block;
+  will-change: transform, opacity;
+  animation: fadeInAndScroll 10s linear infinite;
+}
+
+@keyframes fadeInAndScroll {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+}
+
+figure img:hover {
+  animation-play-state: paused;
+} */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  figure img {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   * {
@@ -27,6 +90,7 @@ html, body{
     transform: none !important;
     filter: none !important;
   }
+  
 
   html {
     scroll-behavior: auto;
