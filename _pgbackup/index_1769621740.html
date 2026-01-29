@@ -22,7 +22,7 @@
         <meta name="description" content="Portfolio von Martins Bonders"> 
         <title>Portfolio - Martins Bonders</title>
         <style>
-    /* Essential fixes for the glass elements */
+    /* Enhanced fix for the unwanted highlight line on glass elements */
     .glass {
         border-top: 0 !important;
         box-shadow: none !important;
@@ -31,132 +31,15 @@
     
     .glass::before, 
     .glass::after {
-        content: none !important;
+        content: none !important; /* Disabling pseudo-elements that often carry border gradients */
+        border-top: 0 !important;
+        box-shadow: none !important;
     }
 
+    /* Alternative approach: clipping the top edge if the line is rendered by the container itself */
     section.glass {
         clip-path: inset(1px 0% 0% 0%);
-        margin-top: -1px;
-    }
-
-    /* Standard Theme Colors */
-    [data-theme="light"] {
-        --color-text-base: #1a1a1a;
-        --nav-bg: rgba(255, 255, 255, 0.4);
-    }
-    [data-theme="dark"] {
-        --color-text-base: #ffffff;
-        --nav-bg: rgba(0, 0, 0, 0.4);
-    }
-
-    /* Fluid Responsive Typography - Enhanced for Large Screens */
-    :root {
-        --fs-base: clamp(1rem, 0.95rem + 0.3vw, 1.25rem);
-        --fs-h1: clamp(2.5rem, 2rem + 4vw, 5.5rem);
-        --fs-h2: clamp(1.75rem, 1.5rem + 2.5vw, 4rem);
-        --fs-h3: clamp(1.125rem, 1rem + 0.8vw, 2rem);
-        --fs-nav: clamp(0.875rem, 0.8rem + 0.6vw, 1.5rem); /* Increased scale for side nav */
-    }
-
-    body {
-        font-size: var(--fs-base);
-        line-height: 1.6;
-        color: var(--color-text-base);
-    }
-
-    h1 {
-        font-size: var(--fs-h1);
-        line-height: 1.1;
-        font-weight: 800;
-        letter-spacing: -0.03em;
-        margin-bottom: 0.2em;
-    }
-
-    h2 {
-        font-size: var(--fs-h2);
-        line-height: 1.2;
-        font-weight: 700;
-        letter-spacing: -0.01em;
-        margin-bottom: 1em;
-    }
-
-    h3, summary {
-        font-size: var(--fs-h3);
-        font-weight: 600;
-    }
-
-    p {
-        max-width: 65ch;
-        margin-bottom: 1.2em;
-    }
-
-    .hero-text p {
-        font-size: clamp(1.125rem, 1rem + 0.5vw, 1.75rem);
-        font-weight: 400;
-        opacity: 0.85;
-        margin: 0;
-        letter-spacing: 0.01em;
-    }
-
-    h1, h2, h3, p, summary {
-        color: var(--color-text-base);
-        transition: color 0.3s ease;
-    }
-
-    mark {
-        color: inherit;
-        background: transparent;
-        font-weight: 600;
-        border-bottom: 2px solid var(--scene-color, #7D5FFA);
-    }
-
-    /* Side Navigation (Scene Menu) - Large Display Optimization */
-    .scene-nav {
-        padding: clamp(1.5rem, 1rem + 1vw, 2.5rem) clamp(1rem, 0.8rem + 1vw, 2rem) !important;
-        background: var(--nav-bg) !important;
-        backdrop-filter: blur(12px);
-        border-radius: 2rem;
-        right: 2rem !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .scene-nav__item {
-        margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem) !important;
-    }
-
-    .scene-nav__label {
-        font-size: var(--fs-nav) !important;
-        font-weight: 500 !important;
-        margin-right: clamp(1rem, 0.8rem + 1vw, 2rem) !important;
-        opacity: 0.6;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .scene-nav__item.is-active .scene-nav__label {
-        opacity: 1;
-        font-weight: 700 !important;
-        transform: translateX(-5px);
-    }
-
-    .scene-nav__dot {
-        width: clamp(12px, 10px + 0.5vw, 20px) !important;
-        height: clamp(12px, 10px + 0.5vw, 20px) !important;
-        border: 2px solid var(--color-text-base) !important;
-        background: transparent !important;
-        transition: all 0.3s ease;
-    }
-
-    .scene-nav__item.is-active .scene-nav__dot {
-        background: var(--scene-color, #7D5FFA) !important;
-        border-color: var(--scene-color, #7D5FFA) !important;
-        transform: scale(1.3);
-        box-shadow: 0 0 15px var(--scene-color, #7D5FFA);
-    }
-
-    .project-showcase__content {
-        padding-top: 1rem;
+        margin-top: -1px; /* Offset the clip */
     }
 </style>         
         <link rel="icon" href="img/easternwaves.svg" type="image/svg+xml"> 
@@ -537,7 +420,7 @@
                 </article>                 
             </section>             
             <section id="grafik" class="glass" data-scroll-scene data-scene-title="Grafik" data-scene-color="#63F2B4"> 
-                <h2 class="">Grafik</h2> 
+                <h2 class="vfx3">Grafik</h2> 
                 <article> 
                     <div class="project-showcase" data-project-showcase> 
                         <div class="project-showcase__details" role="list"> 
