@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff1f0" />
+      <stop offset="1" stop-color="#fffaf5" />
+    </linearGradient>
+  </defs>
+  <rect rx="16" ry="16" width="100%" height="100%" fill="url(#g2)" stroke="#fae7e5" stroke-width="2" />
+  <g font-family="Inter, Arial, Helvetica, sans-serif" font-weight="600" fill="#9b8b8b" font-size="44">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Placeholder Image 2</text>
+  </g>
+</svg>

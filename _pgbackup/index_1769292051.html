@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            (function () {
+                try {
+                    var key = 'portfolio-color-theme';
+                    var root = document.documentElement;
+                    var stored = localStorage.getItem(key);
+                    var sys = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                    var theme = stored || sys;
+                    root.setAttribute('data-theme', theme);
+                } catch (e) { /* no-op */ }
+            })();
+        </script>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+        <meta name="description" content="Portfolio von Martins Bonders">
+        <title>Portfolio</title>
+        <link rel="icon" href="img/easternwaves.svg" type="image/svg+xml">
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.11/dist/bigger-picture.min.css">
+        <link rel="stylesheet" href="css/inter.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js" defer></script>
+    </head>
+    <body class="grid">
+        <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true" id="myVideo" poster="img/hintergrund.webp">
+            <source src="img/hintergrund2.webm" type="video/webm" media="(min-width: 48rem)" data-quality="high">
+            <source src="img/hintergrund.webm" type="video/webm" data-quality="low">
+        </video>
+        <header class="grid-header">
+            <nav class="header glass" aria-label="Hauptnavigation">
+                <a href="#home"><img src="img/easternwaves.svg" alt="logo" width="60" height="60" decoding="async"></a>
+                <ul class="menu" id="site-menu">
+                    <li><a href="#dev">DEV</a>
+                    </li>
+                    <li><a href="#ui/ux">UI/UX</a>
+                    </li>
+                    <li><a href="#layout">LAYOUT</a>
+                    </li>
+                    <li><a href="#werb">WERBUNG</a>
+                    </li>
+                    <li><a href="#grafik">GRAFIK</a>
+                    </li>
+                </ul>
+                <div class="header-actions">
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                        <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+                        </svg>
+                        <span class="sr-only" data-theme-toggle-text>Zum hellen Modus wechseln</span>
+                    </button>
+                    <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="MenÃ¼ Ã¶ffnen"><span class="menu-toggle__icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main id="main-content" class="grid-main ">
+            <section id="home" class="glass grid-main-hero" data-scroll-scene data-scene-title="Start" data-scene-color="#9F83FF">
+                <aside class="tech-slideshow mask test">
+                    <div class="mover-1 tech-slideshow__track tech-slideshow__track--down tech-slideshow__track--base">
+                        <div class="tech-slideshow__inner">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 1" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="UI Mockup helle Variante" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="Editorial Layout Seite 1" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 2" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="App Icon Konzept" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="Alvarez Chocolat Mockup" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 3" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="Editorial Layout Seiten 4 und 5" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="Infografik Ã¼ber WÃ¶lfe" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="UI Mockup dunkle Variante" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="Editorial Layout Seiten 16 und 17" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 1" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="UI Mockup helle Variante" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="Editorial Layout Seite 1" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 2" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="App Icon Konzept" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="Alvarez Chocolat Mockup" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 3" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="Editorial Layout Seiten 4 und 5" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="Infografik Ã¼ber WÃ¶lfe" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="UI Mockup dunkle Variante" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="Editorial Layout Seiten 16 und 17" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="mover-2 tech-slideshow__track tech-slideshow__track--down tech-slideshow__track--overlay" aria-hidden="true">
+                        <div class="tech-slideshow__inner">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </aside>
+                <div class="hero-text">
+                    <h1>Portfolio</h1>
+                    <p>Martins Bonders</p>
+                    <p>Designer & Developer</p>
+                </div>
+                <aside class="tech-slideshow mask">
+                    <div class="mover-3 tech-slideshow__track tech-slideshow__track--up tech-slideshow__track--base">
+                        <div class="tech-slideshow__inner">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="UI Mockup dunkle Variante" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="Infografik Ã¼ber WÃ¶lfe" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="Editorial Layout Seiten 4 und 5" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 3" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="Alvarez Chocolat Mockup" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="App Icon Konzept" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 2" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="Editorial Layout Seite 1" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="UI Mockup helle Variante" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 1" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="Editorial Layout Seiten 16 und 17" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="UI Mockup dunkle Variante" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="Infografik Ã¼ber WÃ¶lfe" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="Editorial Layout Seiten 4 und 5" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 3" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="Alvarez Chocolat Mockup" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="App Icon Konzept" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 2" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="Editorial Layout Seite 1" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="UI Mockup helle Variante" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="Capoeira Plakat Serie â€“ Motiv 1" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="Editorial Layout Seiten 16 und 17" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <div class="mover-4 tech-slideshow__track tech-slideshow__track--up tech-slideshow__track--overlay" aria-hidden="true">
+                        <div class="tech-slideshow__inner">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-dark-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/Infografik-Wolf-Web-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-4-5-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-3-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/alvarez-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/App-Icon-1.svg" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-2-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seite-1-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/ui-mockup-400w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/capoeira-plakat-1-300w.webp" alt="" loading="lazy" decoding="async">
+                            <img src="img/layout-seiten-16-17-400w.webp" alt="" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <section id="dev" class="glass" data-scroll-scene data-scene-title="Dev" data-scene-color="#7D5FFA">
+                <h2>DEV</h2>
+                <article>
+                    <div class="project-showcase" data-project-showcase>
+                        <div class="project-showcase__details" role="list">
+                            <details class="project-showcase__item" data-project-id="dev-1" name="dev-showcase" open>
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-dev-1" aria-expanded="true">Alvarez Chocolat â€“ Launch</summary>
+                                <div class="project-showcase__content">
+                                    <p>Gestaltung und Umsetzung eines digitalen Auftritts fÃ¼r <mark>Alvarez Chocolat</mark>. Fokus auf hochwertige Produktinszenierung, Mikrointeraktionen und klare Conversion-Pfade. Erstellt mit <mark>HTML, CSS &amp; JavaScript</mark>.</p>
+                                    <a href="https://wendigotech.github.io/Webseite/" target="_blank" class="button-link" role="button" rel="noopener noreferrer">Zur Live-Version</a>
+                                </div>
+                            </details>
+                            <details class="project-showcase__item" data-project-id="dev-2" name="dev-showcase">
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-dev-2" aria-expanded="false">Produktseiten &amp; Animationen</summary>
+                                <div class="project-showcase__content">
+                                    <p>Vertiefung des Layouts mit animierten ProduktbÃ¼hnen, sanften Scroll-Triggern und responsiven Breakpoints. Aufbau eines skalierbaren Komponenten-Systems inklusive flexibler Inhaltsmodule.</p>
+                                </div>
+                            </details>
+                            <details class="project-showcase__item" data-project-id="dev-3" name="dev-showcase">
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-dev-3" aria-expanded="false">Kontakt &amp; Bestellfluss</summary>
+                                <div class="project-showcase__content">
+                                    <p>Implementierung eines mehrstufigen Kontakt- und Bestellformulars mit Inline-Validierung. Optimiert fÃ¼r Barrierefreiheit, Tastatursteuerung und schnelle Performance.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="project-showcase__visual">
+                            <div class="project-showcase__preview images" data-project-gallery aria-live="polite">
+                                <div id="project-preview-dev-1" class="project-showcase__preview-item is-active" data-project-id="dev-1" aria-hidden="false" role="group" aria-label="Alvarez Chocolat â€“ Launch Bilder">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide is-active" data-showcase-slide="0" href="img/website-screenshot-1.png" data-img="img/website-screenshot-1.png" data-thumb="img/website-screenshot-1.png" data-alt="Alvarez Chocolat Landing Page" data-height="1080" data-width="1920" tabindex="0">
+                                            <img src="img/website-screenshot-1.png" width="960" height="540" loading="lazy" alt="Alvarez Chocolat Landing Page">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/website-screenshot-2.png" data-img="img/website-screenshot-2.png" data-thumb="img/website-screenshot-2.png" data-alt="ProduktÃ¼bersicht Alvarez Chocolat" data-height="1080" data-width="1920" tabindex="-1" aria-hidden="true">
+                                            <img src="img/website-screenshot-2.png" width="960" height="540" loading="lazy" alt="ProduktÃ¼bersicht Alvarez Chocolat">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/website-screenshot-3.png" data-img="img/website-screenshot-3.png" data-thumb="img/website-screenshot-3.png" data-alt="Kontaktbereich Alvarez Chocolat" data-height="1080" data-width="1920" tabindex="-1" aria-hidden="true">
+                                            <img src="img/website-screenshot-3.png" width="960" height="540" loading="lazy" alt="Kontaktbereich Alvarez Chocolat">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Alvarez Chocolat â€“ Launch">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="0"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                                <div id="project-preview-dev-2" class="project-showcase__preview-item" data-project-id="dev-2" aria-hidden="true" role="group" aria-label="Produktseiten &amp; Animationen Bilder">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide" data-showcase-slide="0" href="img/alvarez-mockup-800w.webp" data-img="img/alvarez-mockup-800w.webp" data-thumb="img/alvarez-mockup-400w.webp" data-alt="Mockup Produktseite" data-height="800" data-width="1200" tabindex="-1" aria-hidden="true">
+                                            <img src="img/alvarez-mockup-800w.webp" width="960" height="540" loading="lazy" alt="Mockup Produktseite">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/ui-mockup-1920w.webp" data-img="img/ui-mockup-1920w.webp" data-thumb="img/ui-mockup-400w.webp" data-alt="UI Animation Seitenansicht" data-height="1080" data-width="1920" tabindex="-1" aria-hidden="true">
+                                            <img src="img/ui-mockup-800w.webp" width="960" height="540" loading="lazy" alt="UI Animation Seitenansicht">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/ui-dark-mockup-1280w.webp" data-img="img/ui-dark-mockup-1280w.webp" data-thumb="img/ui-dark-mockup-400w.webp" data-alt="UI Dark Mode Mockup" data-height="800" data-width="1280" tabindex="-1" aria-hidden="true">
+                                            <img src="img/ui-dark-mockup-800w.webp" width="960" height="540" loading="lazy" alt="UI Dark Mode Mockup">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Produktseiten &amp; Animationen">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                                <div id="project-preview-dev-3" class="project-showcase__preview-item" data-project-id="dev-3" aria-hidden="true" role="group" aria-label="Kontakt &amp; Bestellfluss Bilder">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide" data-showcase-slide="0" href="img/alvarez-mobile.webp" data-img="img/alvarez-mobile.webp" data-thumb="img/alvarez-mobile.webp" data-alt="Mobile Kontaktseite" data-height="960" data-width="540" tabindex="-1" aria-hidden="true">
+                                            <img src="img/alvarez-mobile.webp" width="540" height="960" loading="lazy" alt="Mobile Kontaktseite">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/Mobile-360-Alvarez-iPhone-5c.webp" data-img="img/Mobile-360-Alvarez-iPhone-5c.webp" data-thumb="img/Mobile-360-Alvarez-iPhone-5c-(400w).webp" data-alt="Mobile Bestellstrecke" data-height="1280" data-width="720" tabindex="-1" aria-hidden="true">
+                                            <img src="img/Mobile-360-Alvarez-iPhone-5c.webp" width="720" height="1280" loading="lazy" alt="Mobile Bestellstrecke">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/opto-energy.gif" data-img="img/opto-energy.gif" data-thumb="img/opto-energy.gif" data-alt="Interaktionsanimation" data-height="768" data-width="1365" tabindex="-1" aria-hidden="true">
+                                            <img src="img/opto-energy.gif" width="960" height="540" loading="lazy" alt="Interaktionsanimation">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Kontakt &amp; Bestellfluss">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-showcase__controls">
+                                <button type="button" class="showcase-nav showcase-nav--exit magic-hover magic-hover__square" data-showcase-exit aria-label="Details schlieÃŸen">&times;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-prev aria-label="Vorheriges Projekt">&#10094;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-next aria-label="NÃ¤chstes Projekt">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="ui/ux" class="glass" data-scroll-scene data-scene-title="UI/UX" data-scene-color="#6DD4FF">
+                <h2>UI/UX</h2>
+                <article>
+                    <div class="project-showcase" data-project-showcase>
+                        <div class="project-showcase__details" role="list">
+                            <details class="project-showcase__item" data-project-id="ui-1" name="ui-showcase" open>
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-ui-1" aria-expanded="true">Screendesign â€“ Adobe XD Challenge</summary>
+                                <div class="project-showcase__content">
+                                    <p>Visuelle <mark>Gestaltung</mark> einer mobilen App inklusive Logo mit <mark>Adobe XD</mark>.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="project-showcase__visual">
+                            <div class="project-showcase__preview images" data-project-gallery aria-live="polite">
+                                <div id="project-preview-ui-1" class="project-showcase__preview-item is-active" data-project-id="ui-1" aria-hidden="false" role="group" aria-label="Screendesign â€“ Adobe XD Challenge Bilder">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide is-active" data-showcase-slide="0" href="img/App-Icon-1.svg" data-img="img/App-Icon-1.svg" data-thumb="img/App-Icon-1.svg" data-alt="App Icon" data-height="500" data-width="500" tabindex="0">
+                                            <img src="img/App-Icon-1.svg" width="500" height="500" loading="lazy" alt="App Icon">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/ui-mockup-1920w.webp" data-img="img/ui-mockup-1920w.webp" data-thumb="img/ui-mockup-400w.webp" data-alt="UI Mockup hell" data-height="1080" data-width="1920" tabindex="-1" aria-hidden="true">
+                                            <img src="img/ui-mockup-800w.webp" width="800" height="450" loading="lazy" alt="UI Mockup helle Variante">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/ui-dark-mockup-1280w.webp" data-img="img/ui-dark-mockup-1280w.webp" data-thumb="img/ui-dark-mockup-400w.webp" data-alt="UI Mockup dunkel" data-height="800" data-width="1280" tabindex="-1" aria-hidden="true">
+                                            <img src="img/ui-dark-mockup-800w.webp" width="800" height="450" loading="lazy" alt="UI Mockup dunkle Variante">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Screendesign â€“ Adobe XD Challenge">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="0"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-showcase__controls">
+                                <button type="button" class="showcase-nav showcase-nav--exit magic-hover magic-hover__square" data-showcase-exit aria-label="Details schlieÃŸen">&times;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-prev aria-label="Vorheriges Bild">&#10094;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-next aria-label="NÃ¤chstes Bild">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="layout" class="glass" data-scroll-scene data-scene-title="Layout" data-scene-color="#FFB86C">
+                <h2>Layout</h2>
+                <article>
+                    <div class="project-showcase" data-project-showcase>
+                        <div class="project-showcase__details" role="list">
+                            <details class="project-showcase__item" data-project-id="layout-1" name="layout-showcase" open>
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-layout-1" aria-expanded="true">Schulprojekt â€“ Layoutdesign</summary>
+                                <div class="project-showcase__content">
+                                    <p>Sonderausgabe fÃ¼r das <mark>Magazin</mark> <cite>Hohe Luft</cite>. Erstellt mit Adobe <mark>InDesign &amp; Illustrator</mark>.</p>
+                                    <a href="https://indd.adobe.com/view/cf0e9b48-cff8-4894-9e4b-2a0137f5f145" target="_blank" class="button-link" role="button" rel="noopener noreferrer">Link zum PDF</a>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="project-showcase__visual">
+                            <div class="project-showcase__preview images" data-project-gallery aria-live="polite">
+                                <div id="project-preview-layout-1" class="project-showcase__preview-item is-active" data-project-id="layout-1" aria-hidden="false" role="group" aria-label="Layout Bilder">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide is-active" data-showcase-slide="0" href="img/layout-seite-1-580w.webp" data-img="img/layout-seite-1-580w.webp" data-thumb="img/layout-seite-1-400w.webp" data-alt="Layout Seite 1" data-height="470" data-width="580" tabindex="0">
+                                            <img src="img/layout-seite-1-580w.webp" width="580" height="320" loading="lazy" alt="Layout Seite 1">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/layout-seiten-4-5-1150w.webp" data-img="img/layout-seiten-4-5-1150w.webp" data-thumb="img/layout-seiten-4-5-400w.webp" data-alt="Layout Seiten 4â€“5" data-height="471" data-width="1150" tabindex="-1" aria-hidden="true">
+                                            <img src="img/layout-seiten-4-5-800w.webp" width="800" height="320" loading="lazy" alt="Layout Seiten 4â€“5">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/layout-seiten-16-17-1150w.webp" data-img="img/layout-seiten-16-17-1150w.webp" data-thumb="img/layout-seiten-16-17-400w.webp" data-alt="Layout Seiten 16â€“17" data-height="471" data-width="1150" tabindex="-1" aria-hidden="true">
+                                            <img src="img/layout-seiten-16-17-800w.webp" width="800" height="320" loading="lazy" alt="Layout Seiten 16â€“17">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Layout">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="0"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-showcase__controls">
+                                <button type="button" class="showcase-nav showcase-nav--exit magic-hover magic-hover__square" data-showcase-exit aria-label="Details schlieÃŸen">&times;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-prev aria-label="Vorheriges Bild">&#10094;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-next aria-label="NÃ¤chstes Bild">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="images" hidden>
+                        <figcaption>
+                            <h3>Schulprojekt - <mark>Layoutdesign</mark></h3>
+                            <p>Sonderausgabe fÃ¼r das <mark>Magazin</mark> <cite>â€žHohe Luftâ€œ</cite>.</p>
+                            <p>Erstellt mit Adobe <mark>InDesign & Illustrator</mark>.</p><a href="https://indd.adobe.com/view/cf0e9b48-cff8-4894-9e4b-2a0137f5f145" target="_blank" class="button-link" role="button">Link zum PDF</a>
+                        </figcaption><a href="img/layout-seite-1-580w.webp" data-img="img/layout-seite-1-580w.webp" data-thumb="img/layout-seite-1-400w.webp" data-alt="layout seite 1" data-height="470" data-width="580"> <img width="580" height="320" src="img/layout-seite-1-580w.webp" srcset="img/layout-seite-1-580w.webp 580w, img/layout-seite-1-400w.webp 400w" sizes="50vw" alt="layout seite 1"> </a><a href="img/layout-seiten-4-5-1150w.webp" data-img="img/layout-seiten-4-5-1150w.webp" data-thumb="img/layout-seiten-4-5-400w.webp" data-alt="layout seiten 4-5" data-height="471" data-width="1150"> <img width="800" height="320" src="img/layout-seiten-4-5-800w.webp" srcset="img/layout-seiten-4-5-1150w.webp 1150w, img/layout-seiten-4-5-800w.webp 800w, img/layout-seiten-4-5-400w.webp 400w" sizes="50vw" alt="layout seiten 4-5"> </a><a href="img/layout-seiten-16-17-1150w.webp" data-img="img/layout-seiten-16-17-1150w.webp" data-thumb="img/layout-seiten-16-17-400w.webp" data-alt="layout seiten 16-17" data-height="471" data-width="1150"> <img width="800" height="320" src="img/layout-seiten-16-17-800w.webp" srcset="img/layout-seiten-16-17-1150w.webp 1150w, img/layout-seiten-16-17-800w.webp 800w, img/layout-seiten-16-17-400w.webp 400w" sizes="50vw" alt="layout seiten 16-17"> </a>
+                    </figure>
+                </article>
+            </section>
+            <section id="werb" class="glass" data-scroll-scene data-scene-title="Werbung" data-scene-color="#FF7096">
+                <h2>Werbung</h2>
+                <article>
+                    <div class="project-showcase" data-project-showcase>
+                        <div class="project-showcase__details" role="list">
+                            <details class="project-showcase__item" data-project-id="werb-1" name="werb-showcase" open>
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-werb-1" aria-expanded="true">Ausbildungsprojekt â€“ Veranstaltungsplakat</summary>
+                                <div class="project-showcase__content">
+                                    <p>Gestaltung von Veranstaltungsplakaten. Erstellt mit Adobe <mark>InDesign</mark> und <mark>Photoshop</mark>.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="project-showcase__visual">
+                            <div class="project-showcase__preview images" data-project-gallery aria-live="polite">
+                                <div id="project-preview-werb-1" class="project-showcase__preview-item is-active" data-project-id="werb-1" aria-hidden="false" role="group" aria-label="Plakate Capoeira Ibeca">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide is-active" data-showcase-slide="0" href="img/capoeira-plakat-1-600w.webp" data-img="img/capoeira-plakat-1-600w.webp" data-thumb="img/capoeira-plakat-1-300w.webp" data-alt="Plakat Capoeira Ibeca 1" data-height="850" data-width="600" tabindex="0">
+                                            <img src="img/capoeira-plakat-1-300w.webp" width="300" height="500" loading="lazy" alt="Plakat Capoeira Ibeca 1">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="1" href="img/capoeira-plakat-2-600w.webp" data-img="img/capoeira-plakat-2-600w.webp" data-thumb="img/capoeira-plakat-2-300w.webp" data-alt="Plakat Capoeira Ibeca 2" data-height="850" data-width="600" tabindex="-1" aria-hidden="true">
+                                            <img src="img/capoeira-plakat-2-300w.webp" width="300" height="500" loading="lazy" alt="Plakat Capoeira Ibeca 2">
+                                        </a>
+                                        <a class="project-showcase__slide" data-showcase-slide="2" href="img/capoeira-plakat-3-600w.webp" data-img="img/capoeira-plakat-3-600w.webp" data-thumb="img/capoeira-plakat-3-300w.webp" data-alt="Plakat Capoeira Ibeca 3" data-height="850" data-width="600" tabindex="-1" aria-hidden="true">
+                                            <img src="img/capoeira-plakat-3-300w.webp" width="300" height="500" loading="lazy" alt="Plakat Capoeira Ibeca 3">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Plakate">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="0"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="1" aria-label="Bild 2 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                        <button type="button" class="project-showcase__dot" data-showcase-dot="2" aria-label="Bild 3 anzeigen" aria-selected="false" tabindex="-1"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-showcase__controls">
+                                <button type="button" class="showcase-nav showcase-nav--exit magic-hover magic-hover__square" data-showcase-exit aria-label="Details schlieÃŸen">&times;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-prev aria-label="Vorheriges Bild">&#10094;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-next aria-label="NÃ¤chstes Bild">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <figure hidden>
+                        <figcaption>
+                            <h3>Ausbildungsprojekt - <mark>Veranstalltungsplakat</mark></h3>
+                            <p>Erstellt mit Adobe <mark>InDesign</mark> und <mark>Photoshop</mark>.</p>
+                        </figcaption>
+                        <div class="images"><a href="img/capoeira-plakat-1-600w.webp" data-img="img/capoeira-plakat-1-600w.webp" data-thumb="img/capoeira-plakat-1-300w.webp" data-alt="Plakat Capoeira Ibeca" data-height="850" data-width="600"> <img width="300" height="500" src="img/capoeira-plakat-1-300w.webp" srcset="img/capoeira-plakat-1-600w.webp 600w, img/capoeira-plakat-1-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca"> </a><a href="img/capoeira-plakat-2-600w.webp" data-img="img/capoeira-plakat-2-600w.webp" data-thumb="img/capoeira-plakat-2-300w.webp" data-alt="Plakat Capoeira Ibeca" data-height="850" data-width="600"> <img width="300" height="500" src="img/capoeira-plakat-2-300w.webp" srcset="img/capoeira-plakat-2-600w.webp 600w, img/capoeira-plakat-2-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca"> </a><a href="img/capoeira-plakat-3-600w.webp" data-img="img/capoeira-plakat-3-600w.webp" data-thumb="img/capoeira-plakat-3-300w.webp" data-alt="Plakat Capoeira Ibeca" data-height="850" data-width="600"> <img width="300" height="500" src="img/capoeira-plakat-3-300w.webp" srcset="img/capoeira-plakat-3-600w.webp 600w, img/capoeira-plakat-3-300w.webp 300w" sizes="50vw" alt="Plakat Capoeira Ibeca"> </a>
+                        </div>                         
+                    </figure>
+                </article>
+            </section>
+            <section id="grafik" class="glass" data-scroll-scene data-scene-title="Grafik" data-scene-color="#63F2B4">
+                <h2 class="vfx3">Grafik</h2>
+                <article>
+                    <div class="project-showcase" data-project-showcase>
+                        <div class="project-showcase__details" role="list">
+                            <details class="project-showcase__item" data-project-id="grafik-1" name="grafik-showcase" open>
+                                <summary class="magic-hover magic-hover__square" aria-controls="project-preview-grafik-1" aria-expanded="true">Schulprojekt â€“ Infografik</summary>
+                                <div class="project-showcase__content">
+                                    <p>Infografik: <mark>WÃ¶lfe in Deutschland</mark>. Erstellt mit Adobe <mark>Illustrator &amp; Photoshop</mark>.</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="project-showcase__visual">
+                            <div class="project-showcase__preview images" data-project-gallery aria-live="polite">
+                                <div id="project-preview-grafik-1" class="project-showcase__preview-item is-active" data-project-id="grafik-1" aria-hidden="false" role="group" aria-label="Infografik WÃ¶lfe">
+                                    <div class="project-showcase__slides" data-showcase-slides>
+                                        <a class="project-showcase__slide is-active" data-showcase-slide="0" href="img/Infografik-Wolf-Web-1000w.webp" data-img="img/Infografik-Wolf-Web-1000w.webp" data-thumb="img/Infografik-Wolf-Web-400w.webp" data-alt="Infografik: WÃ¶lfe in Deutschland" data-height="600" data-width="850" tabindex="0">
+                                            <img src="img/Infografik-Wolf-Web-800w.webp" width="800" height="580" loading="lazy" alt="Infografik: WÃ¶lfe in Deutschland">
+                                        </a>
+                                    </div>
+                                    <div class="project-showcase__dots" data-showcase-dots role="group" aria-label="Bildergalerie Infografik">
+                                        <button type="button" class="project-showcase__dot is-active" data-showcase-dot="0" aria-label="Bild 1 anzeigen" aria-selected="true" tabindex="0"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-showcase__controls">
+                                <button type="button" class="showcase-nav showcase-nav--exit magic-hover magic-hover__square" data-showcase-exit aria-label="Details schlieÃŸen">&times;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-prev aria-label="Vorheriges Bild">&#10094;</button>
+                                <button type="button" class="showcase-nav magic-hover magic-hover__square" data-showcase-next aria-label="NÃ¤chstes Bild">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="images" hidden>
+                        <figcaption>
+                            <h3>Schulprojekt - <mark>Infografik</mark>: WÃ¶lfe in Deutschland</h3>
+                            <p>Erstellt mit Adobe <mark>Illustrator & Photoshop</mark>.</p>
+                        </figcaption><a href="img/Infografik-Wolf-Web-1000w.webp" data-img="img/Infografik-Wolf-Web-1000w.webp" data-thumb="img/Infografik-Wolf-Web-400w.webp" data-alt="Infografik: WÃ¶lfe in Deutschland" data-height="600" data-width="850"> <img width="800" height="580" src="img/Infografik-Wolf-Web-800w.webp" srcset="img/Infografik-Wolf-Web-1000w.webp 1000w, img/Infografik-Wolf-Web-800w.webp 800w, img/Infografik-Wolf-Web-400w.webp 400w" sizes="50vw" alt="Infografik: WÃ¶lfe in Deutschland"> </a>
+                    </figure>
+                </article>
+            </section>             
+        </main>
+        <button class="back-to-top" type="button" data-back-to-top><span aria-hidden="true">&uarr;</span><span class="sr-only">Nach oben</span>
+        </button>
+        <footer class="glass grid-footer">
+            <nav>
+                <ul>
+                    <li><a href="impressum.html">IMPRESSUM</a>
+                    </li>
+                    <li><a href="#home"><img src="img/easternwaves.svg" alt="logo" width="50" height="50" decoding="async"></a>
+                    </li>
+                    <li><a href="datenschutz.html">DATENSCHUTZ</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bigger-picture@1.1.11/dist/bigger-picture.min.js"></script>
+        <script src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
+
+
+
+
