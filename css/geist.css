@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Geist Typography System (Sans, Mono, Pixel, Serif & Editorial Italic)
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url("../fonts/Geist-Variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+    src: url("../fonts/Geist-Italic-Variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url("../fonts/GeistMono-Variable.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist Pixel';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url("../fonts/GeistPixel-Square.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Geist Serif';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url("../fonts/GeistSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+    src: url("../fonts/InstrumentSerif-Italic.woff2") format("woff2");
+}
+
+:root {
+    --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    --font-pixel: 'Geist Pixel', 'Geist Mono', monospace;
+    --font-serif: 'Instrument Serif', 'Geist Serif', Georgia, 'Times New Roman', serif;
+    --font-geist-serif: 'Geist Serif', Georgia, serif;
+}
+
+/* Visually stable mixed fonts & fallbacks (modern-web-guidance) */
+body,
+.mixed-lockup,
+.hero-text,
+.project-showcase__content {
+    font-family: var(--font-sans);
+    font-size-adjust: from-font;
+}
+
+.font-sans {
+    font-family: var(--font-sans);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+}
+
+.font-pixel {
+    font-family: var(--font-pixel);
+    letter-spacing: 0.03em;
+    font-weight: 400;
+}
+
+.font-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.font-geist-serif {
+    font-family: var(--font-geist-serif);
+    font-weight: 400;
+}
+
+/* Fallback for browsers without font-size-adjust: from-font support */
+@supports not (font-size-adjust: from-font) {
+    .font-mono {
+        font-size: 0.92em;
+        line-height: 1.5;
+    }
+
+    .font-pixel {
+        font-size: 0.95em;
+        line-height: 1.4;
+    }
+
+    .font-serif {
+        font-size: 1.12em;
+        line-height: 1.35;
+    }
+}

@@ -1,64 +1,107 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz</title>
-    <link rel="stylesheet" href="css/inter.css">
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function () {
+            try {
+                var key = 'portfolio-color-theme';
+                var root = document.documentElement;
+                var stored = localStorage.getItem(key);
+                var sys = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+                var theme = stored || sys;
+                root.setAttribute('data-theme', theme);
+            } catch (e) { /* no-op */ }
+        })();
+    </script>
+    <title>Datenschutz – Portfolio Martins Bonders</title>
+    <link rel="icon" href="img/easternwaves.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/geist.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body class="grid">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header class="grid-header">
-        <nav class="header glass magic-hover magic-hover__square" aria-label="Hauptnavigation">
-            <a href="index.html#home"><img src="img/easternwaves.svg" alt="logo" width="60" height="60"></a>
-            <button class="menu-toggle magic-hover magic-hover__square" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false">
-                <span class="menu-toggle__icon" aria-hidden="true"></span>
-                <span class="menu-toggle__text">Menü</span>
-            </button>
+        <nav class="header glass" aria-label="Hauptnavigation">
+            <a href="index.html#home" class="header__brand"><img src="img/easternwaves.svg" alt="Eastern Waves – Startseite" width="60" height="60" decoding="async"></a>
             <ul class="menu" id="site-menu">
-                <li><a href="index.html#dev">DEV</a>
-                </li>
-                <li><a href="index.html#ui/ux">UI/UX</a>
-                </li>
-                <li><a href="index.html#layout">LAYOUT</a>
-                </li>
-                <li><a href="index.html#werb">WERBUNG</a>
-                </li>
-                <li><a href="index.html#grafik">GRAFIK</a>
-                </li>
+                <li><a href="index.html#dev"><span class="nav-index font-mono" aria-hidden="true">01</span>DEV</a></li>
+                <li><a href="index.html#ui-ux"><span class="nav-index font-mono" aria-hidden="true">02</span>UI/UX</a></li>
+                <li><a href="index.html#layout"><span class="nav-index font-mono" aria-hidden="true">03</span>LAYOUT</a></li>
+                <li><a href="index.html#werb"><span class="nav-index font-mono" aria-hidden="true">04</span>WERBUNG</a></li>
+                <li><a href="index.html#grafik"><span class="nav-index font-mono" aria-hidden="true">05</span>GRAFIK</a></li>
             </ul>
+            <div class="header-actions">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+                    </svg>
+                    <span class="sr-only" data-theme-toggle-text>Zum hellen Modus wechseln</span>
+                </button>
+                <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-menu" aria-expanded="false" aria-label="Menü öffnen">
+                    <span class="menu-toggle__icon" aria-hidden="true"></span>
+                </button>
+            </div>
         </nav>
     </header>
-    <main class="grid-main glass">
-        <h1>Datenschutz</h1>
-        <p><strong>Datenschutzerklärung</strong></p>
-        <p><strong>Allgemeiner Hinweis und Pflichtinformationen</strong></p>
-        <p><strong>Benennung der verantwortlichen Stelle</strong></p>
-        <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-        <p>Martins Bonders<br>
-        Musterstraße 1<br>
-        12345 Musterstadt</p>
-        <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
-        <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
-        <p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
-        <p><strong>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</strong></p>
-        <p>Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
-        <p><strong>Recht auf Datenübertragbarkeit</strong></p>
-        <p>Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
-        <p><strong>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</strong></p>
-        <p>Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum aufgeführten Kontaktmöglichkeiten an uns wenden.</p>
-        <p><strong>SSL- bzw. TLS-Verschlüsselung</strong></p>
-        <p>Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL-bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar. Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.</p>
+    <main id="main-content" class="grid-main" tabindex="-1">
+        <section class="glass legal-section">
+            <div class="section-spine" aria-hidden="true">
+                <span class="section-spine__index font-pixel">§</span>
+                <span class="section-spine__line"></span>
+                <span class="section-spine__label font-mono">LEGAL // DATENSCHUTZ</span>
+            </div>
+            <h1>Datenschutz</h1>
+            <article class="legal-content">
+                <h2>Datenschutzerklärung – Allgemeiner Hinweis und Pflichtinformationen</h2>
+                <h3>Benennung der verantwortlichen Stelle</h3>
+                <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+                <p>Martins Bonders<br>
+                Musterstraße 1<br>
+                12345 Musterstadt</p>
+                <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
+
+                <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+                <p>Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.</p>
+
+                <h3>Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</h3>
+                <p>Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit: <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank" rel="noopener noreferrer">bfdi.bund.de – Anschriften und Links <span class="sr-only">(öffnet in neuem Tab)</span></a>.</p>
+
+                <h3>Recht auf Datenübertragbarkeit</h3>
+                <p>Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.</p>
+
+                <h3>Recht auf Auskunft, Berichtigung, Sperrung, Löschung</h3>
+                <p>Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im Impressum aufgeführten Kontaktmöglichkeiten an uns wenden.</p>
+
+                <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+                <p>Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL- bzw. TLS-Verschlüsselung. Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar. Sie erkennen eine verschlüsselte Verbindung an der „https://“ Adresszeile Ihres Browsers und am Schloss-Symbol in der Browserzeile.</p>
+            </article>
+        </section>
     </main>
-    <footer class="glass grid-footer magic-hover magic-hover__square">
-        <nav>
+    <footer class="glass grid-footer">
+        <nav aria-label="Rechtliche Navigation">
             <ul>
-                <li><a href="impressum.html">IMPRESSUM</a></li>
-                <li><a href="index.html#home"><img src="img/easternwaves.svg" alt="logo" width="50" height="50"></a></li>
-                <li><a href="datenschutz.html">DATENSCHUTZ</a></li>
+                <li><a href="impressum.html" class="font-mono">IMPRESSUM</a></li>
+                <li><a href="index.html#home"><img src="img/easternwaves.svg" alt="Eastern Waves – Startseite" width="50" height="50" decoding="async"></a></li>
+                <li><a href="datenschutz.html" class="font-mono" aria-current="page">DATENSCHUTZ</a></li>
             </ul>
         </nav>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
